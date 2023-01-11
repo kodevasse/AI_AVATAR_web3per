@@ -34,14 +34,14 @@ window.addEventListener("resize", () => {
 });
 const widthHeight = computed(() => {
   if (screenWidth.value >= 1500) {
-    return { width: "2.5rem", height: "2.5rem" };
+    return { width: "2rem", height: "2rem" };
   } else {
-    return { width: "1.9rem", height: "1.9rem" };
+    return { width: "1.75rem", height: "1.75rem" };
   }
 });
 const widthHeightLinks = computed(() => {
   if (screenWidth.value >= 1500) {
-    return { width: "1.9rem", height: "1.9rem" };
+    return { width: "1.5rem", height: "1.5rem" };
   } else {
     return { width: "1.4rem", height: "1.4rem" };
   }
@@ -64,7 +64,7 @@ const widthHeightLinks = computed(() => {
             >Per Pettersen</span
           >
           <p
-            class="absolute 2xl:ml-[22.5%] ml-[23%] sm:ml-[12.9%] 2xl:mt-[6.5rem] 2xl:text-base text-[0.6rem] mt-[4.3rem] sm:mt-[6rem]"
+            class="absolute 2xl:ml-[22.5%] ml-[23%] sm:ml-[12.9%] 2xl:mt-[6.2rem] 2xl:text-base text-[0.6rem] mt-[4.3rem] sm:mt-[6rem]"
           >
             -
             <span
@@ -74,7 +74,7 @@ const widthHeightLinks = computed(() => {
             -
           </p>
           <div
-            class="absolute 2xl:ml-[18.5%] m-[6%] 2xl:mt-40 mt-28 2xl:w-[19%] 2xl:text-base text-xs sm:ml-[5%] xl:max-w-xl bg-gray-900 2xl:bg-transparent bg-opacity-50 pt-2 rounded-[10px]"
+            class="absolute 2xl:ml-[18.5%] m-[6%] 2xl:mt-40 mt-28 2xl:w-[19%] 2xl:text-[1rem] 2xl:leading-5 text-[0.85rem] sm:ml-[5%] xl:max-w-xl bg-gray-900 2xl:bg-transparent bg-opacity-50 pt-2 rounded-[10px] leading-5"
           >
             <span class="font-extrabold text-purple-200 xl:text-purple-300"
               >I've always been drawn to the power of technology to change the
@@ -117,7 +117,7 @@ const widthHeightLinks = computed(() => {
                   <div
                     class="flex flex-row items-center text-teal-300 cursor-pointer hover:opacity-70 transition-all duration-300 ease-in"
                   >
-                    <IconBrandVue :style="widthHeight" />Vue.js3
+                    <IconBrandVue :style="widthHeight" />Vue.js
                   </div>
                   <div
                     class="flex flex-row items-center cursor-pointer hover:opacity-70 transition-all duration-300 ease-in"
