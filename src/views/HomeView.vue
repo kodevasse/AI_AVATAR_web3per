@@ -16,6 +16,8 @@ import IconBrandGithub from "@/components/icons/IconBrandGithub.vue";
 import IconBrandNodejs from "@/components/icons/IconBrandNodejs.vue";
 import IconArrowLeft from "@/components/icons/IconArrowLeft.vue";
 import IconArrowRight from "@/components/icons/IconArrowRight.vue";
+import IconApp from "@/components/icons/IconApp.vue";
+import IconArticle from "@/components/icons/IconArticle.vue";
 
 const projects = ref(false);
 const isLarge = computed(() => {
@@ -58,11 +60,11 @@ const widthHeightLinks = computed(() => {
       >
         <div>
           <span
-            class="absolute 2xl:ml-[18.5%] ml-[8%] 2xl:mt-16 sm:mt-14 mt-8 text-[2rem] 2xl:text-[2.6rem] font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-orange-500"
+            class="absolute 2xl:ml-[18.5%] ml-[8%] 2xl:mt-14 sm:mt-14 mt-8 text-[2rem] 2xl:text-[2.6rem] font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-orange-500"
             >Per Pettersen</span
           >
           <p
-            class="absolute 2xl:ml-[22.9%] ml-[23%] sm:ml-[12.9%] 2xl:mt-28 2xl:text-sm text-[0.6rem] mt-[4.3rem] sm:mt-[6rem]"
+            class="absolute 2xl:ml-[22.9%] ml-[23%] sm:ml-[12.9%] 2xl:mt-[6.5rem] 2xl:text-sm text-[0.6rem] mt-[4.3rem] sm:mt-[6rem]"
           >
             -
             <span class="font-extrabold text-purple-300 text-[0.6rem]"
@@ -89,7 +91,7 @@ const widthHeightLinks = computed(() => {
             <span class="text-orange-200 font-bold">AI</span>.
 
             <article
-              class="animate-background 2xl:mt-20 rounded-xl bg-gradient-to-r mt-6 from-rose-200 via-purple-300 to-orange-500 bg-[length:400%_400%] p-[0.11rem] shadow-xl transition [animation-duration:_6s] hover:shadow-sm dark:shadow-gray-700/25"
+              class="animate-background 2xl:mt-16 rounded-xl bg-gradient-to-r mt-6 from-rose-200 via-purple-300 to-orange-500 bg-[length:400%_400%] p-[0.11rem] shadow-xl transition [animation-duration:_6s] hover:shadow-sm dark:shadow-gray-700/25"
             >
               <div class="rounded-[10px] bg-white p-4 dark:bg-gray-900 sm:p-4">
                 <time
@@ -160,20 +162,79 @@ const widthHeightLinks = computed(() => {
                 </div>
               </div>
             </article>
+            <div class="flex flex-row gap-x-4 justify-center">
+              <article
+                class="animate-background 2xl:mt-5 rounded-xl bg-gradient-to-r mt-6 bg-[length:400%_400%] p-[0.11rem] shadow-xl transition [animation-duration:_6s] hover:shadow-sm dark:shadow-gray-700/25 dark:transition-all dark:duration-500 hover:bg-gray-800 cursor-pointer 2xl:w-full"
+              >
+                <div
+                  class="rounded-[10px] bg-white p-4 dark:bg-gray-900 sm:p-4"
+                >
+                  <time
+                    datetime="2022-10-10"
+                    class="block text-xl text-gray-200 dark:text-purple-300 mb-2"
+                  >
+                    Projects
+                  </time>
+                  <div
+                    class="flex flex-col flex-wrap w-full md:gap-x-2 md:gap-y-2 gap-y-0.5 gap-x-0.5"
+                  >
+                    <div
+                      class="flex flex-row items-center cursor-pointer hover:opacity-70 transition-all duration-300 ease-in"
+                    >
+                      <IconApp :style="widthHeightLinks" />Open AI chat
+                    </div>
+                    <div
+                      class="flex flex-row items-center text-yellow-100 cursor-pointer hover:opacity-70 transition-all duration-300 ease-in"
+                    >
+                      <IconApp :style="widthHeightLinks" />Js cheatsheet
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <article
+                class="animate-background 2xl:mt-5 rounded-xl bg-gradient-to-r mt-6 bg-[length:400%_400%] p-[0.11rem] shadow-xl transition [animation-duration:_6s] hover:shadow-sm dark:shadow-gray-700/25 dark:transition-all dark:duration-500 hover:bg-gray-800 cursor-pointer 2xl:w-full"
+              >
+                <div
+                  class="rounded-[10px] bg-white p-4 dark:bg-gray-900 sm:p-4"
+                >
+                  <time
+                    datetime="2022-10-10"
+                    class="block text-xl text-gray-200 dark:text-teal-300 mb-2"
+                  >
+                    Blog
+                  </time>
+                  <div
+                    class="flex flex-col flex-wrap w-full md:gap-x-2 md:gap-y-2 gap-y-0.5 gap-x-0.5"
+                  >
+                    <div
+                      class="flex flex-row items-center cursor-pointer hover:opacity-70 transition-all duration-300 ease-in"
+                    >
+                      <IconArticle :style="widthHeightLinks" /> How to prompt
+                    </div>
+                    <div
+                      class="flex flex-row items-center cursor-pointer hover:opacity-70 transition-all duration-300 ease-in"
+                    >
+                      <IconArticle :style="widthHeightLinks" />Vuejs 3 in 2023
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
           </div>
         </div>
       </div>
     </Transition>
-    <div
+    <Transition> <div></div></Transition>
+    <!-- <div
       class="absolute 2xl:ml-[33.4%] m-[75.4%] 2xl:mt-[46rem] -bottom-44 2xl:w-[19%] 2xl:text-md text-xs sm:ml-[5%] text-orange-200 opacity-70"
     >
       <IconArrowRight v-bind:class="{ 'h-16 w-16': isLarge }" />
     </div>
     <div
-      class="absolute 2xl:ml-[18.5%] m-[8.5%] 2xl:mt-[46rem] bottom-[5.3rem] 2xl:w-[19%] 2xl:text-md text-xs sm:ml-[5%] text-purple-300 opacity-70"
+      class="absolute 2xl:ml-[18.5%] m-[8.5%] 2xl:mt-[46rem]  2xl:w-[19%] 2xl:text-md text-xs sm:ml-[5%] text-purple-300 opacity-70"
     >
       <IconArrowLeft v-bind:class="{ 'h-16 w-16': isLarge }" />
-    </div>
+    </div> -->
     <Transition>
       <article
         class="absolute right-0 2xl:mr-24 sm:mr-4 animate-background mt-1 mr-1 rounded-xl bg-gradient-to-r from-orange-600 via-teal-300 to-purple-500 bg-[length:400%_400%] p-[0.11rem] shadow-xl transition [animation-duration:_6s] hover:shadow-sm dark:shadow-gray-700/25"
