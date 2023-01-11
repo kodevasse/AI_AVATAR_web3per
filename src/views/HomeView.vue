@@ -11,8 +11,6 @@ import IconBrandVue from "@/components/icons/IconBrandVue.vue";
 import IconBrandVscode from "@/components/icons/IconBrandVscode.vue";
 import IconBrandVite from "@/components/icons/IconBrandVite.vue";
 
-const loading = ref(true);
-
 const screenWidth = ref(window.innerWidth);
 
 window.addEventListener("resize", () => {
@@ -28,12 +26,9 @@ const widthHeight = computed(() => {
 </script>
 
 <template>
-  <div v-if="loading" class="loading-spinner"></div>
   <div
     class="h-screen w-screen p-0 m-0 bg-local sm:bg-cover bg-no-repeat bg-center transition-all ease-in-out duration-100 relative"
-    v-else
-    style="background-image: url(/images/web3permain.png)"
-    @load="loading = false"
+    style="background-image: url(/images/web3permain80.png)"
   >
     <Transition>
       <div class="text-gray-300 font-mono flex flex-col overflow-hidden">
