@@ -10,7 +10,21 @@ import IconBrandTailwind from "@/components/icons/IconBrandTailwind.vue";
 import IconBrandVue from "@/components/icons/IconBrandVue.vue";
 import IconBrandVscode from "@/components/icons/IconBrandVscode.vue";
 import IconBrandVite from "@/components/icons/IconBrandVite.vue";
+import IconBrandTwitter from "@/components/icons/IconBrandTwitter.vue";
+import IconBrandLinkedin from "@/components/icons/IconBrandLinkedin.vue";
+import IconBrandGithub from "@/components/icons/IconBrandGithub.vue";
+import IconBrandNodejs from "@/components/icons/IconBrandNodejs.vue";
+import IconArrowLeft from "@/components/icons/IconArrowLeft.vue";
+import IconArrowRight from "@/components/icons/IconArrowRight.vue";
 
+const projects = ref(false);
+const isLarge = computed(() => {
+  if (screenWidth.value >= 1500) {
+    return true;
+  } else {
+    return true;
+  }
+});
 const screenWidth = ref(window.innerWidth);
 
 window.addEventListener("resize", () => {
@@ -23,6 +37,13 @@ const widthHeight = computed(() => {
     return { width: "1.9rem", height: "1.9rem" };
   }
 });
+const widthHeightLinks = computed(() => {
+  if (screenWidth.value >= 1500) {
+    return { width: "1.9rem", height: "1.9rem" };
+  } else {
+    return { width: "1.4rem", height: "1.4rem" };
+  }
+});
 </script>
 
 <template>
@@ -31,7 +52,10 @@ const widthHeight = computed(() => {
     style="background-image: url(/images/web3permain80.png)"
   >
     <Transition>
-      <div class="text-gray-300 font-mono flex flex-col overflow-hidden">
+      <div
+        class="text-gray-300 font-mono flex flex-col overflow-hidden"
+        :class="projects ? 'opacity-0' : 'opacity-100'"
+      >
         <div>
           <span
             class="absolute 2xl:ml-[18.5%] ml-[8%] 2xl:mt-16 sm:mt-14 mt-8 text-[2rem] 2xl:text-[2.6rem] font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-orange-500"
@@ -47,12 +71,12 @@ const widthHeight = computed(() => {
             -
           </p>
           <div
-            class="absolute 2xl:ml-[18.5%] m-[6%] 2xl:mt-48 mt-28 2xl:w-[19%] 2xl:text-md text-xs sm:ml-[5%] xl:max-w-xl bg-gray-900 bg-opacity-50"
+            class="absolute 2xl:ml-[18.5%] m-[6%] 2xl:mt-48 mt-28 2xl:w-[19%] 2xl:text-md text-xs sm:ml-[5%] xl:max-w-xl bg-gray-900 2xl:bg-transparent bg-opacity-50 pt-2 rounded-[10px]"
           >
-            <span class="font-extrabold text-purple-200"
+            <span class="font-extrabold text-purple-200 xl:text-purple-300"
               >I've always been drawn to the power of technology to change the
               world.</span
-            ><span class="text-gray-200 sm:text-gray-300">
+            ><span class="text-gray-200 2xl:text-gray-300">
               <br /><br />As a full-stack developer, I've dedicated my dev
               career to understanding the potential of decentralized
               technologies and how they can empower people to take control of
@@ -72,7 +96,7 @@ const widthHeight = computed(() => {
                   datetime="2022-10-10"
                   class="block text-xl text-gray-200 dark:text-orange-300 mb-2"
                 >
-                  Tools
+                  Skills
                 </time>
                 <div
                   class="flex flex-row flex-wrap w-full md:gap-x-2 md:gap-y-2 gap-y-0.5 gap-x-0.5"
@@ -80,80 +104,58 @@ const widthHeight = computed(() => {
                   <div
                     class="flex flex-row items-center text-cyan-300 cursor-pointer hover:opacity-70 transition-all duration-300 ease-in"
                   >
-                    <IconBrandEth class="" :style="widthHeight" />Solidity
+                    <IconBrandEth :style="widthHeight" />Solidity
                   </div>
                   <div
                     class="flex flex-row items-center text-yellow-100 cursor-pointer hover:opacity-70 transition-all duration-300 ease-in"
                   >
-                    <IconBrandJavascript
-                      class=""
-                      style="width: 2.5rem; height: 2.5rem"
-                    />Javascript
+                    <IconBrandJavascript :style="widthHeight" />Javascript
                   </div>
                   <div
                     class="flex flex-row items-center text-teal-300 cursor-pointer hover:opacity-70 transition-all duration-300 ease-in"
                   >
-                    <IconBrandVue
-                      class=""
-                      style="width: 2.5rem; height: 2.5rem"
-                    />Vue.js3
+                    <IconBrandVue :style="widthHeight" />Vue.js3
                   </div>
                   <div
                     class="flex flex-row items-center cursor-pointer hover:opacity-70 transition-all duration-300 ease-in"
                   >
-                    <IconBrandVite
-                      class=""
-                      style="width: 2.5rem; height: 2.5rem"
-                    />Vite
+                    <IconBrandVite :style="widthHeight" />Vite
                   </div>
                   <div
                     class="flex flex-row items-center cursor-pointer hover:opacity-70 transition-all duration-300 ease-in"
                   >
-                    <IconBrandGit
-                      class=""
-                      style="width: 2.5rem; height: 2.5rem"
-                    />Git
+                    <IconBrandGit :style="widthHeight" />Git
                   </div>
                   <div
                     class="flex flex-row items-center cursor-pointer hover:opacity-70 transition-all duration-300 ease-in"
                   >
-                    <IconBrandTailwind
-                      class=""
-                      style="width: 2.5rem; height: 2.5rem"
-                    />TailwindCSS
+                    <IconBrandTailwind :style="widthHeight" />TailwindCSS
                   </div>
 
                   <div
                     class="flex flex-row items-center text-purple-300 cursor-pointer hover:opacity-70 transition-all duration-300 ease-in"
                   >
-                    <IconBrandVscode
-                      class=""
-                      style="width: 2.5rem; height: 2.5rem"
-                    />Vscode
+                    <IconBrandVscode :style="widthHeight" />Vscode
                   </div>
                   <div
                     class="flex flex-row items-center cursor-pointer hover:opacity-70 transition-all duration-300 ease-in"
                   >
-                    <IconBrandSvelte
-                      class=""
-                      style="width: 2.5rem; height: 2.5rem"
-                    />Svelte
+                    <IconBrandSvelte :style="widthHeight" />Svelte
+                  </div>
+                  <!-- <div
+                    class="flex flex-row items-center cursor-pointer hover:opacity-70 transition-all duration-300 ease-in"
+                  >
+                    <IconBrandReact :style="widthHeight" />React
+                  </div> -->
+                  <div
+                    class="flex flex-row items-center cursor-pointer hover:opacity-70 transition-all duration-300 ease-in"
+                  >
+                    <IconBrandNodejs :style="widthHeight" />Nodejs
                   </div>
                   <div
                     class="flex flex-row items-center cursor-pointer hover:opacity-70 transition-all duration-300 ease-in"
                   >
-                    <IconBrandReact
-                      class=""
-                      style="width: 2.5rem; height: 2.5rem"
-                    />React
-                  </div>
-                  <div
-                    class="flex flex-row items-center cursor-pointer hover:opacity-70 transition-all duration-300 ease-in"
-                  >
-                    <IconBrandNpm
-                      class=""
-                      style="width: 2.5rem; height: 2.5rem"
-                    />
+                    <IconBrandNpm :style="widthHeight" />
                   </div>
                 </div>
               </div>
@@ -162,8 +164,81 @@ const widthHeight = computed(() => {
         </div>
       </div>
     </Transition>
-    <!-- <div class="static right-0 w-12 h-12 ml-[16%] mt-24 text-white bg-gray-600">
-      Menu
+    <div
+      class="absolute 2xl:ml-[33.4%] m-[75.4%] 2xl:mt-[46rem] -bottom-44 2xl:w-[19%] 2xl:text-md text-xs sm:ml-[5%] text-orange-200 opacity-70"
+    >
+      <IconArrowRight v-bind:class="{ 'h-16 w-16': isLarge }" />
+    </div>
+    <div
+      class="absolute 2xl:ml-[18.5%] m-[8.5%] 2xl:mt-[46rem] bottom-[5.3rem] 2xl:w-[19%] 2xl:text-md text-xs sm:ml-[5%] text-purple-300 opacity-70"
+    >
+      <IconArrowLeft v-bind:class="{ 'h-16 w-16': isLarge }" />
+    </div>
+    <Transition>
+      <article
+        class="absolute right-0 2xl:mr-24 sm:mr-4 animate-background mt-1 mr-1 rounded-xl bg-gradient-to-r from-orange-600 via-teal-300 to-purple-500 bg-[length:400%_400%] p-[0.11rem] shadow-xl transition [animation-duration:_6s] hover:shadow-sm dark:shadow-gray-700/25"
+      >
+        <div class="rounded-[10px] bg-white p-1 dark:bg-gray-900 sm:p-1">
+          <time
+            datetime="2022-10-10"
+            class="block text-xl text-gray-200 dark:text-purple-300"
+          >
+          </time>
+          <div class="flex flex-row flex-wrap w-full gap-y-0.5">
+            <a
+              href="https://twitter.com/web3perp"
+              target="_blank"
+              class="flex flex-row items-center text-cyan-300 cursor-pointer hover:opacity-70 transition-all duration-300 ease-in"
+            >
+              <IconBrandTwitter class="" :style="widthHeightLinks" />
+            </a>
+            <a
+              href="https://github.com/kodevasse"
+              target="_blank"
+              class="flex flex-row items-center text-yellow-100 cursor-pointer hover:opacity-70 transition-all duration-300 ease-in"
+            >
+              <IconBrandGithub class="" :style="widthHeightLinks" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/per-pettersen-876435202/"
+              target="_blank"
+              class="flex flex-row items-center text-blue-300 cursor-pointer hover:opacity-70 transition-all duration-300 ease-in"
+            >
+              <IconBrandLinkedin class="" :style="widthHeightLinks" />
+            </a>
+          </div>
+        </div>
+      </article>
+    </Transition>
+
+    <!-- <div class="text-white">
+      A normal text and a helper dropdown
+      <div class="dropdown dropdown-end">
+        <label tabindex="0" class="btn btn-circle btn-ghost btn-xs text-info">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            class="w-4 h-4 stroke-current"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+            ></path>
+          </svg>
+        </label>
+        <div
+          tabindex="0"
+          class="card compact dropdown-content shadow bg-yellow-300 bg-opacity-70 rounded-box w-64"
+        >
+          <div class="card-body">
+            <h2 class="card-title">You needed more info?</h2>
+            <p>Here is a description!</p>
+          </div>
+        </div>
+      </div>
     </div> -->
   </div>
 </template>

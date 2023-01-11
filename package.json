@@ -9,9 +9,9 @@
   },
   "dependencies": {
     "@tailwindcss/line-clamp": "^0.4.2",
+    "daisyui": "^2.46.1",
     "pinia": "^2.0.28",
     "vue": "^3.2.45",
-    "vue-media": "^1.1.1",
     "vue-router": "^4.1.6"
   },
   "devDependencies": {
