@@ -64,16 +64,17 @@ const widthHeightLinks = computed(() => {
             >Per Pettersen</span
           >
           <p
-            class="absolute 2xl:ml-[22.9%] ml-[23%] sm:ml-[12.9%] 2xl:mt-[6.5rem] 2xl:text-sm text-[0.6rem] mt-[4.3rem] sm:mt-[6rem]"
+            class="absolute 2xl:ml-[22.5%] ml-[23%] sm:ml-[12.9%] 2xl:mt-[6.5rem] 2xl:text-base text-[0.6rem] mt-[4.3rem] sm:mt-[6rem]"
           >
             -
-            <span class="font-extrabold text-purple-300 text-[0.6rem]"
+            <span
+              class="font-extrabold text-purple-300 text-[0.6rem] 2xl:text-xs"
               >Web 3 </span
-            ><span class="text-[0.6rem]">developer</span>
+            ><span class="text-[0.6rem] 2xl:text-xs">developer</span>
             -
           </p>
           <div
-            class="absolute 2xl:ml-[18.5%] m-[6%] 2xl:mt-48 mt-28 2xl:w-[19%] 2xl:text-md text-xs sm:ml-[5%] xl:max-w-xl bg-gray-900 2xl:bg-transparent bg-opacity-50 pt-2 rounded-[10px]"
+            class="absolute 2xl:ml-[18.5%] m-[6%] 2xl:mt-40 mt-28 2xl:w-[19%] 2xl:text-base text-xs sm:ml-[5%] xl:max-w-xl bg-gray-900 2xl:bg-transparent bg-opacity-50 pt-2 rounded-[10px]"
           >
             <span class="font-extrabold text-purple-200 xl:text-purple-300"
               >I've always been drawn to the power of technology to change the
@@ -91,7 +92,7 @@ const widthHeightLinks = computed(() => {
             <span class="text-orange-200 font-bold">AI</span>.
 
             <article
-              class="animate-background 2xl:mt-16 rounded-xl bg-gradient-to-r mt-6 from-rose-200 via-purple-300 to-orange-500 bg-[length:400%_400%] p-[0.11rem] shadow-xl transition [animation-duration:_6s] hover:shadow-sm dark:shadow-gray-700/25"
+              class="animate-background 2xl:mt-10 rounded-xl bg-gradient-to-r mt-6 from-rose-200 via-purple-300 to-orange-500 bg-[length:400%_400%] p-[0.11rem] shadow-xl transition [animation-duration:_6s] hover:shadow-sm dark:shadow-gray-700/25"
             >
               <div class="rounded-[10px] bg-white p-4 dark:bg-gray-900 sm:p-4">
                 <time
@@ -167,7 +168,7 @@ const widthHeightLinks = computed(() => {
                 class="animate-background 2xl:mt-5 rounded-xl bg-gradient-to-r mt-6 bg-[length:400%_400%] p-[0.11rem] shadow-xl transition [animation-duration:_6s] hover:shadow-sm dark:shadow-gray-700/25 dark:transition-all dark:duration-500 hover:bg-gray-800 cursor-pointer 2xl:w-full"
               >
                 <div
-                  class="rounded-[10px] bg-white p-4 dark:bg-gray-900 sm:p-4"
+                  class="rounded-[10px] bg-white p-4 dark:bg-gray-900 sm:p-4 h-full"
                 >
                   <time
                     datetime="2022-10-10"
@@ -178,16 +179,20 @@ const widthHeightLinks = computed(() => {
                   <div
                     class="flex flex-col flex-wrap w-full md:gap-x-2 md:gap-y-2 gap-y-0.5 gap-x-0.5"
                   >
-                    <div
+                    <a
+                      href="https://ppcode.dev"
+                      target="_blank"
                       class="flex flex-row items-center cursor-pointer hover:opacity-70 transition-all duration-300 ease-in"
                     >
                       <IconApp :style="widthHeightLinks" />Open AI chat
-                    </div>
-                    <div
+                    </a>
+                    <a
+                      href="https://jscheatsheet.netlify.app/"
+                      target="_blank"
                       class="flex flex-row items-center text-yellow-100 cursor-pointer hover:opacity-70 transition-all duration-300 ease-in"
                     >
                       <IconApp :style="widthHeightLinks" />Js cheatsheet
-                    </div>
+                    </a>
                   </div>
                 </div>
               </article>
@@ -214,7 +219,7 @@ const widthHeightLinks = computed(() => {
                     <div
                       class="flex flex-row items-center cursor-pointer hover:opacity-70 transition-all duration-300 ease-in"
                     >
-                      <IconArticle :style="widthHeightLinks" />Vuejs 3 in 2023
+                      <IconArticle :style="widthHeightLinks" />Vuejs 3 in x23
                     </div>
                   </div>
                 </div>
