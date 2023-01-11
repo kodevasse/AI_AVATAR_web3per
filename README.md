@@ -1,6 +1,6 @@
 # AI_AVATAR_web3per
 
-This template should help get you started developing with Vue 3 in Vite.
+VUEJS 3 + Vite + Tailwind CSS
 
 ## Recommended IDE Setup
 
