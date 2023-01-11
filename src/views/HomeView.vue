@@ -1,5 +1,5 @@
 <script setup>
-import { media } from "vue-media";
+import { ref, computed } from "vue";
 import IconBrandEth from "@/components/icons/IconBrandEth.vue";
 import IconBrandGit from "@/components/icons/IconBrandGit.vue";
 import IconBrandJavascript from "@/components/icons/IconBrandJavascript.vue";
@@ -10,12 +10,30 @@ import IconBrandTailwind from "@/components/icons/IconBrandTailwind.vue";
 import IconBrandVue from "@/components/icons/IconBrandVue.vue";
 import IconBrandVscode from "@/components/icons/IconBrandVscode.vue";
 import IconBrandVite from "@/components/icons/IconBrandVite.vue";
+
+const loading = ref(true);
+
+const screenWidth = ref(window.innerWidth);
+
+window.addEventListener("resize", () => {
+  screenWidth.value = window.innerWidth;
+});
+const widthHeight = computed(() => {
+  if (screenWidth.value >= 1500) {
+    return { width: "2.5rem", height: "2.5rem" };
+  } else {
+    return { width: "1.9rem", height: "1.9rem" };
+  }
+});
 </script>
 
 <template>
+  <div v-if="loading" class="loading-spinner"></div>
   <div
     class="h-screen w-screen p-0 m-0 bg-local sm:bg-cover bg-no-repeat bg-center transition-all ease-in-out duration-100 relative"
+    v-else
     style="background-image: url(/images/web3permain.png)"
+    @load="loading = false"
   >
     <Transition>
       <div class="text-gray-300 font-mono flex flex-col overflow-hidden">
@@ -27,23 +45,26 @@ import IconBrandVite from "@/components/icons/IconBrandVite.vue";
           <p
             class="absolute 2xl:ml-[22.9%] ml-[23%] sm:ml-[12.9%] 2xl:mt-28 2xl:text-sm text-[0.6rem] mt-[4.3rem] sm:mt-[6rem]"
           >
-            - <span class="font-extrabold text-purple-300">Web 3 </span
+            -
+            <span class="font-extrabold text-purple-300 text-[0.6rem]"
+              >Web 3 </span
             ><span class="text-[0.6rem]">developer</span>
             -
           </p>
           <div
-            class="absolute 2xl:ml-[18.5%] m-[6%] 2xl:mt-48 mt-28 2xl:w-[19%] 2xl:text-md text-xs sm:ml-[5%] xl:max-w-xl"
+            class="absolute 2xl:ml-[18.5%] m-[6%] 2xl:mt-48 mt-28 2xl:w-[19%] 2xl:text-md text-xs sm:ml-[5%] xl:max-w-xl bg-gray-900 bg-opacity-50"
           >
             <span class="font-extrabold text-purple-200"
               >I've always been drawn to the power of technology to change the
               world.</span
-            >
-            <br /><br />As a full-stack developer, I've dedicated my dev career
-            to understanding the potential of decentralized technologies and how
-            they can empower people to take control of their own data and
-            assets.<br /><br />
-            My passion for blockchain technology led me to start my personal
-            blog, where I share my thoughts on the intersection of
+            ><span class="text-gray-200 sm:text-gray-300">
+              <br /><br />As a full-stack developer, I've dedicated my dev
+              career to understanding the potential of decentralized
+              technologies and how they can empower people to take control of
+              their own data and assets.<br /><br />
+              My passion for blockchain technology led me to start my personal
+              blog, where I share my thoughts on the intersection of
+            </span>
             <span class="text-cyan-200 font-bold">Web3</span>,
             <span class="text-rose-200 font-bold">Blockchain</span>, and
             <span class="text-orange-200 font-bold">AI</span>.
@@ -59,15 +80,12 @@ import IconBrandVite from "@/components/icons/IconBrandVite.vue";
                   Tools
                 </time>
                 <div
-                  class="flex flex-row flex-wrap w-full gap-x-2 gap-y-2 justify-center"
+                  class="flex flex-row flex-wrap w-full md:gap-x-2 md:gap-y-2 gap-y-0.5 gap-x-0.5"
                 >
                   <div
                     class="flex flex-row items-center text-cyan-300 cursor-pointer hover:opacity-70 transition-all duration-300 ease-in"
                   >
-                    <IconBrandEth
-                      class=""
-                      style="width: 2.5rem; height: 2.5rem"
-                    />Solidity
+                    <IconBrandEth class="" :style="widthHeight" />Solidity
                   </div>
                   <div
                     class="flex flex-row items-center text-yellow-100 cursor-pointer hover:opacity-70 transition-all duration-300 ease-in"
@@ -96,19 +114,20 @@ import IconBrandVite from "@/components/icons/IconBrandVite.vue";
                   <div
                     class="flex flex-row items-center cursor-pointer hover:opacity-70 transition-all duration-300 ease-in"
                   >
-                    <IconBrandTailwind
-                      class=""
-                      style="width: 2.5rem; height: 2.5rem"
-                    />TailwindCSS
-                  </div>
-                  <div
-                    class="flex flex-row items-center cursor-pointer hover:opacity-70 transition-all duration-300 ease-in"
-                  >
                     <IconBrandGit
                       class=""
                       style="width: 2.5rem; height: 2.5rem"
                     />Git
                   </div>
+                  <div
+                    class="flex flex-row items-center cursor-pointer hover:opacity-70 transition-all duration-300 ease-in"
+                  >
+                    <IconBrandTailwind
+                      class=""
+                      style="width: 2.5rem; height: 2.5rem"
+                    />TailwindCSS
+                  </div>
+
                   <div
                     class="flex flex-row items-center text-purple-300 cursor-pointer hover:opacity-70 transition-all duration-300 ease-in"
                   >
@@ -176,11 +195,5 @@ import IconBrandVite from "@/components/icons/IconBrandVite.vue";
 .v-enter-from,
 .v-leave-to {
   opacity: 0;
-}
-.small {
-  @apply w-[1.5rem] h-[1.5rem];
-}
-.big {
-  @apply w-[2.5rem] h-[2.5rem];
 }
 </style>
