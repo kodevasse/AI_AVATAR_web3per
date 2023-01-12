@@ -1,5 +1,7 @@
 <script setup>
 import { RouterLink, RouterView } from "vue-router";
+
+document.documentElement.classList.add("dark");
 </script>
 
 <template>
