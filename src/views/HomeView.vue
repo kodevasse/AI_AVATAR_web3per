@@ -175,7 +175,7 @@ const widthHeightLinks = computed(() => {
                     Projects
                   </time>
                   <div
-                    class="flex flex-col flex-wrap w-full md:gap-x-2 md:gap-y-2 gap-y-0.5 gap-x-0.5"
+                    class="flex flex-col flex-wrap w-full md:gap-x-2 md:gap-y-2 gap-y-0.5 gap-x-0.5 text-sm"
                   >
                     <a
                       href="https://ppcode.dev"
@@ -195,7 +195,7 @@ const widthHeightLinks = computed(() => {
                 </div>
               </article>
               <article
-                class="animate-background 2xl:mt-5 rounded-xl bg-gradient-to-r mt-6 bg-[length:400%_400%] p-[0.11rem] shadow-xl transition [animation-duration:_6s] hover:shadow-sm shadow-gray-700/25 transition-all duration-500 hover:bg-gray-800 cursor-pointer 2xl:w-full"
+                class="animate-background 2xl:mt-5 rounded-xl bg-gradient-to-r mt-6 bg-[length:400%_400%] p-[0.11rem] shadow-xl [animation-duration:_6s] hover:shadow-sm shadow-gray-700/25 transition-all duration-500 hover:bg-gray-800 cursor-pointer 2xl:w-full"
               >
                 <div class="rounded-[10px] p-4 bg-gray-900 sm:p-4">
                   <time
@@ -205,7 +205,7 @@ const widthHeightLinks = computed(() => {
                     Blog
                   </time>
                   <div
-                    class="flex flex-col flex-wrap w-full md:gap-x-2 md:gap-y-2 gap-y-0.5 gap-x-0.5"
+                    class="flex flex-col flex-wrap w-full md:gap-x-2 md:gap-y-2 gap-y-0.5 gap-x-0.5 text-sm"
                   >
                     <div
                       class="flex flex-row items-center cursor-pointer hover:opacity-70 transition-all duration-300 ease-in"
