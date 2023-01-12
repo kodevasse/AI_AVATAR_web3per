@@ -66,10 +66,10 @@ const widthTest = computed(() => {
   >
     <Transition>
       <div
-        class="sm:absolute xl:w-[20.85%] mx-auto w-[99%] my-auto bg-gray-800 bg-transparent sm:h-full h-full xl:ml-[17.6%] md:w-[24rem] sm:w-[24rem] transition-all duration-200 ease-out"
+        class="sm:absolute xl:w-[20.85%] mx-auto w-[99%] my-auto bg-gray-800 bg-transparent xl:ml-[17.6%] md:w-[24rem] sm:w-[24rem] transition-all duration-200 ease-out"
       >
         <div
-          class="h-screen flex flex-col w-full text-gray-200 sm:pt-8 pt-10 xl:px-3 sm:px-5 px-6 font-mono xl:bg-opacity-0 sm:bg-opacity-80 sm:bg-gray-900"
+          class="h-full flex flex-col w-full text-gray-200 sm:pt-8 pt-10 xl:px-3 sm:px-5 px-6 font-mono xl:bg-opacity-0 sm:bg-opacity-90 sm:bg-gray-900"
         >
           <div class="">
             <span
@@ -176,10 +176,12 @@ const widthTest = computed(() => {
               <article
                 class="animate-background 2xl:mt-5 rounded-xl bg-gradient-to-r mt-6 bg-[length:400%_400%] p-[0.11rem] shadow-xl transition [animation-duration:_6s] hover:shadow-sm shadow-gray-700/25 duration-500 hover:bg-gray-800 cursor-pointer w-full"
               >
-                <div class="rounded-[10px] p-4 bg-gray-900 sm:p-4 h-full">
+                <div
+                  class="rounded-[10px] p-4 bg-gray-900 sm:p-4 h-full border border-purple-500 border-opacity-10"
+                >
                   <time
                     datetime="2022-10-10"
-                    class="block text-xl text-purple-300 mb-2"
+                    class="block text-xl text-purple-400 mb-2"
                   >
                     Projects
                   </time>
@@ -228,10 +230,12 @@ const widthTest = computed(() => {
               <article
                 class="animate-background 2xl:mt-5 rounded-xl bg-gradient-to-r mt-6 bg-[length:400%_400%] p-[0.11rem] shadow-xl [animation-duration:_6s] hover:shadow-sm shadow-gray-700/25 transition-all duration-500 hover:bg-gray-800 cursor-pointer 2xl:w-full w-full mb-6"
               >
-                <div class="rounded-[10px] p-4 bg-gray-900 sm:p-4">
+                <div
+                  class="rounded-[10px] p-4 bg-gray-900 sm:p-4 border border-cyan-500 border-opacity-10"
+                >
                   <time
                     datetime="2022-10-10"
-                    class="block text-xl text-teal-300 mb-2"
+                    class="block text-xl text-cyan-400 mb-2"
                   >
                     Blog
                   </time>
