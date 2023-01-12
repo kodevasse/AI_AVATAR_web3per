@@ -69,7 +69,7 @@ const widthTest = computed(() => {
         class="sm:absolute xl:w-[20.85%] mx-auto w-[99%] my-auto bg-gray-800 bg-transparent xl:ml-[17.6%] md:w-[24rem] sm:w-[24rem] transition-all duration-200 ease-out"
       >
         <div
-          class="h-full flex flex-col w-full text-gray-200 sm:pt-8 pt-10 xl:px-3 sm:px-5 px-6 font-mono xl:bg-opacity-0 sm:bg-opacity-90 sm:bg-gray-900"
+          class="h-full flex flex-col w-full text-gray-200 sm:pt-12 pt-10 xl:px-3 sm:px-5 px-6 font-mono xl:bg-opacity-0 sm:bg-opacity-90 sm:bg-gray-900"
         >
           <div class="">
             <span
@@ -82,7 +82,11 @@ const widthTest = computed(() => {
               <span
                 class="font-extrabold text-orange-300 text-[0.6rem] 2xl:text-xs"
                 >Web 3 </span
-              ><span class="text-[0.6rem] 2xl:text-xs">developer </span>
+              ><span class="text-[0.6rem] 2xl:text-xs">developer | </span
+              ><span
+                class="text-purple-200 2xl:text-xs text-[0.6rem] font-extrabold"
+                >Blockchain </span
+              ><span class="text-[0.6rem] 2xl:text-xs">Educator</span>
             </p>
           </div>
           <div
@@ -128,19 +132,20 @@ const widthTest = computed(() => {
                     <IconBrandJavascript :style="widthHeight" />Javascript
                   </div>
                   <div
-                    class="flex flex-row items-center text-teal-300 cursor-pointer hover:opacity-70 ease-in"
+                    class="flex flex-row items-center cursor-pointer hover:opacity-70 ease-in"
                   >
-                    <IconBrandVue :style="widthHeight" />Vue.js
+                    <IconBrandGit :style="widthHeight" />Git
                   </div>
+
                   <div
                     class="flex flex-row items-center cursor-pointer hover:opacity-70 ease-in"
                   >
                     <IconBrandVite :style="widthHeight" />Vite
                   </div>
                   <div
-                    class="flex flex-row items-center cursor-pointer hover:opacity-70 ease-in"
+                    class="flex flex-row items-center text-teal-300 cursor-pointer hover:opacity-70 ease-in"
                   >
-                    <IconBrandGit :style="widthHeight" />Git
+                    <IconBrandVue :style="widthHeight" />Vue.js
                   </div>
                   <div
                     class="flex flex-row items-center cursor-pointer hover:opacity-70 ease-in"
@@ -189,39 +194,57 @@ const widthTest = computed(() => {
                     class="flex flex-col flex-wrap w-fit md:gap-x-2 md:gap-y-2 gap-y-0.5 gap-x-0.5 text-sm"
                   >
                     <a
-                      href="https://ppcode.dev"
+                      href="https://www.pdpkrypto.no"
                       target="_blank"
                       class="flex flex-row items-center cursor-pointer hover:opacity-70 ease-in"
                     >
                       <IconApp :style="widthHeightSub" /><span class="ml-0.5"
-                        >Open AI chat</span
+                        >PDPkrypto landing page🔥</span
+                      >
+                    </a>
+                    <a
+                      href="https://vue-walletconnect-web3.netlify.app/"
+                      target="_blank"
+                      class="flex flex-row items-center text-gray-200 cursor-pointer hover:opacity-70 ease-in"
+                    >
+                      <IconApp :style="widthHeightSub" /><span class="ml-0.5"
+                        >Web3 boilerplate, API</span
+                      >
+                    </a>
+                    <a
+                      href="https://ppcode.dev"
+                      target="_blank"
+                      class="flex flex-row items-center text-gray-200 cursor-pointer hover:opacity-70 ease-in"
+                    >
+                      <IconApp :style="widthHeightSub" /><span class="ml-0.5"
+                        >Open AI chat app</span
                       >
                     </a>
                     <a
                       href="https://jscheatsheet.netlify.app/"
                       target="_blank"
-                      class="flex flex-row items-center text-yellow-100 cursor-pointer hover:opacity-70 ease-in"
+                      class="flex flex-row items-center text-gray-200 cursor-pointer hover:opacity-70 ease-in"
                     >
                       <IconApp :style="widthHeightSub" /><span class="ml-0.5"
-                        >Js cheatsheet</span
+                        >JS cheatsheet</span
                       >
                     </a>
                     <a
-                      href="https://jscheatsheet.netlify.app/"
+                      href="https://aitextly.netlify.app/"
                       target="_blank"
-                      class="flex flex-row items-center text-yellow-100 cursor-pointer hover:opacity-70 ease-in"
+                      class="flex flex-row items-center text-gray-200 cursor-pointer hover:opacity-70 ease-in"
                     >
                       <IconApp :style="widthHeightSub" /><span class="ml-0.5"
-                        >Avatar AI</span
+                        >AI Tools App</span
                       >
                     </a>
                     <a
-                      href="https://jscheatsheet.netlify.app/"
+                      href="https://pokemonv1.netlify.app/"
                       target="_blank"
-                      class="flex flex-row items-center text-yellow-100 cursor-pointer hover:opacity-70 ease-in"
+                      class="flex flex-row items-center text-gray-200 cursor-pointer hover:opacity-70 ease-in"
                     >
                       <IconApp :style="widthHeightSub" /><span class="ml-0.5"
-                        >PDPkrypto</span
+                        >Pokemon V1 😎</span
                       >
                     </a>
                   </div>
@@ -237,34 +260,48 @@ const widthTest = computed(() => {
                     datetime="2022-10-10"
                     class="block text-xl text-cyan-400 mb-2"
                   >
-                    Blog
+                    Blog - <span class="text-xs">Comming soon</span>
                   </time>
                   <div
                     class="flex flex-col flex-wrap w-fit md:gap-x-2 md:gap-y-2 gap-y-0.5 gap-x-0.5 text-sm"
                   >
-                    <div
+                    <a
+                      href="https://dev.to/web3per/from-ethernet-to-ethereum-a-journey-through-the-evolution-of-internet-technology-part-1-243a"
+                      target="_blank"
                       class="flex flex-row items-center cursor-pointer hover:opacity-70 ease-in"
                     >
                       <IconArticle :style="widthHeightSub" />
-                      <span class="ml-0.5">How to prompt</span>
+                      <span class="ml-0.5"
+                        >From Ethernet to Ethereum: Part 1</span
+                      >
+                    </a>
+                    <div
+                      class="flex flex-row items-center cursor-pointer hover:opacity-70 ease-in text-red-300"
+                    >
+                      <IconArticle :style="widthHeightSub" />
+                      <span class="ml-0.5"
+                        >Web 3 beginner developer - comming</span
+                      >
                     </div>
                     <div
-                      class="flex flex-row items-center cursor-pointer hover:opacity-70 ease-in"
+                      class="flex flex-row items-center cursor-pointer hover:opacity-70 ease-in text-red-300"
                     >
                       <IconArticle :style="widthHeightSub" />
-                      <span class="ml-0.5">Vuejs 3 in x23</span>
+                      <span class="ml-0.5">How to prompt - AI - comming</span>
                     </div>
                     <div
-                      class="flex flex-row items-center cursor-pointer hover:opacity-70 ease-in"
+                      class="flex flex-row items-center cursor-pointer hover:opacity-70 ease-in text-red-300"
                     >
                       <IconArticle :style="widthHeightSub" />
-                      <span class="ml-0.5">Eth top scaling solutions</span>
+                      <span class="ml-0.5"
+                        >Ethereum scaling solut. - comming</span
+                      >
                     </div>
                     <div
-                      class="flex flex-row items-center cursor-pointer hover:opacity-70 ease-in"
+                      class="flex flex-row items-center cursor-pointer hover:opacity-70 ease-in text-red-300"
                     >
                       <IconArticle :style="widthHeightSub" />
-                      <span class="ml-0.5">Polkadot the tech</span>
+                      <span class="ml-0.5">Polkadot - tech - comming</span>
                     </div>
                   </div>
                 </div>
