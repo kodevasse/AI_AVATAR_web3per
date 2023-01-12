@@ -46,47 +46,35 @@ const widthHeightLinks = computed(() => {
     return { width: "1.4rem", height: "1.4rem" };
   }
 });
-const widthHeightSub = computed(() => {
-  if (screenWidth.value >= 1500) {
-    return { width: "1.2rem", height: "1.2rem" };
-  } else {
-    return { width: "1.0rem", height: "1.0rem" };
-  }
-});
-
-const widthTest = computed(() => {
-  return widthHeight.value * 0.15 + "rem";
-});
 </script>
 
 <template>
   <div
-    class="h-screen w-screen p-0 m-0 sm:bg-cover bg-no-repeat bg-right transition-transform ease-in duration-100 relative overflow-auto"
+    class="h-screen w-screen p-0 m-0 bg-local sm:bg-cover bg-no-repeat bg-center transition-all ease-in-out duration-100 relative"
     style="background-image: url(/images/web3permain80.png)"
   >
     <Transition>
       <div
-        class="sm:absolute xl:w-[20.85%] mx-auto w-[99%] my-auto bg-gray-800 bg-transparent sm:h-full h-full xl:ml-[17.6%] md:w-[24rem] sm:w-[24rem] transition-all duration-200 ease-out"
+        class="text-gray-300 font-mono flex flex-col overflow-hidden"
+        :class="projects ? 'opacity-0' : 'opacity-100'"
       >
-        <div
-          class="h-screen flex flex-col w-full text-gray-200 sm:pt-8 pt-10 xl:px-3 sm:px-5 px-6 font-mono xl:bg-opacity-0 sm:bg-opacity-80 sm:bg-gray-900"
-        >
-          <div class="">
+        <div>
+          <span
+            class="absolute 2xl:ml-[18.5%] ml-[8%] 2xl:mt-14 sm:mt-14 mt-8 text-[2rem] 2xl:text-[2.6rem] font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-orange-500"
+            >Per Pettersen</span
+          >
+          <p
+            class="absolute 2xl:ml-[22.5%] ml-[23%] sm:ml-[12.9%] 2xl:mt-[6.2rem] 2xl:text-base text-[0.6rem] mt-[4.3rem] sm:mt-[6rem]"
+          >
+            -
             <span
-              class="mt-8 text-[2rem] 2xl:text-[2.6rem] font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-orange-500 xl:text-"
-              >Per Pettersen</span
-            >
-          </div>
-          <div>
-            <p class="text-[0.6rem]">
-              <span
-                class="font-extrabold text-orange-300 text-[0.6rem] 2xl:text-xs"
-                >Web 3 </span
-              ><span class="text-[0.6rem] 2xl:text-xs">developer </span>
-            </p>
-          </div>
+              class="font-extrabold text-purple-300 text-[0.6rem] 2xl:text-xs"
+              >Web 3 </span
+            ><span class="text-[0.6rem] 2xl:text-xs">developer</span>
+            -
+          </p>
           <div
-            class="leading-5 mt-10 2xl:text-[1rem] 2xl:leading-5 text-[0.85rem]"
+            class="absolute 2xl:ml-[18.5%] m-[6%] 2xl:mt-40 mt-28 2xl:w-[19%] 2xl:text-[1rem] 2xl:leading-5 text-[0.85rem] sm:ml-[5%] xl:max-w-xl bg-gray-900 2xl:bg-transparent bg-opacity-50 pt-2 rounded-[10px] leading-5"
           >
             <span class="font-extrabold text-purple-200 xl:text-purple-300"
               >I've always been drawn to the power of technology to change the
@@ -102,8 +90,7 @@ const widthTest = computed(() => {
             <span class="text-cyan-200 font-bold">Web3</span>,
             <span class="text-rose-200 font-bold">Blockchain</span>, and
             <span class="text-orange-200 font-bold">AI</span>.
-          </div>
-          <div>
+
             <article
               class="animate-background 2xl:mt-10 rounded-xl bg-gradient-to-r mt-6 from-rose-200 via-purple-300 to-orange-500 bg-[length:400%_400%] p-[0.11rem] shadow-xl transition [animation-duration:_6s] hover:shadow-sm shadow-gray-700/25"
             >
@@ -115,66 +102,70 @@ const widthTest = computed(() => {
                   Skills
                 </time>
                 <div
-                  class="flex flex-row flex-wrap w-full 2xl:gap-x-1 2xl:gap-y-1 gap-y-0.5 gap-x-0.5"
+                  class="flex flex-row flex-wrap w-full md:gap-x-2 md:gap-y-2 gap-y-0.5 gap-x-0.5"
                 >
                   <div
-                    class="flex flex-row items-center text-cyan-300 cursor-pointer hover:opacity-70 ease-in"
+                    class="flex flex-row items-center text-cyan-300 cursor-pointer hover:opacity-70 transition-all duration-300 ease-in"
                   >
                     <IconBrandEth :style="widthHeight" />Solidity
                   </div>
                   <div
-                    class="flex flex-row items-center text-yellow-100 cursor-pointer hover:opacity-70 ease-in"
+                    class="flex flex-row items-center text-yellow-100 cursor-pointer hover:opacity-70 transition-all duration-300 ease-in"
                   >
                     <IconBrandJavascript :style="widthHeight" />Javascript
                   </div>
                   <div
-                    class="flex flex-row items-center text-teal-300 cursor-pointer hover:opacity-70 ease-in"
+                    class="flex flex-row items-center text-teal-300 cursor-pointer hover:opacity-70 transition-all duration-300 ease-in"
                   >
                     <IconBrandVue :style="widthHeight" />Vue.js
                   </div>
                   <div
-                    class="flex flex-row items-center cursor-pointer hover:opacity-70 ease-in"
+                    class="flex flex-row items-center cursor-pointer hover:opacity-70 transition-all duration-300 ease-in"
                   >
                     <IconBrandVite :style="widthHeight" />Vite
                   </div>
                   <div
-                    class="flex flex-row items-center cursor-pointer hover:opacity-70 ease-in"
+                    class="flex flex-row items-center cursor-pointer hover:opacity-70 transition-all duration-300 ease-in"
                   >
                     <IconBrandGit :style="widthHeight" />Git
                   </div>
                   <div
-                    class="flex flex-row items-center cursor-pointer hover:opacity-70 ease-in"
+                    class="flex flex-row items-center cursor-pointer hover:opacity-70 transition-all duration-300 ease-in"
                   >
                     <IconBrandTailwind :style="widthHeight" />TailwindCSS
                   </div>
 
                   <div
-                    class="flex flex-row items-center text-purple-300 cursor-pointer hover:opacity-70 ease-in"
+                    class="flex flex-row items-center text-purple-300 cursor-pointer hover:opacity-70 transition-all duration-300 ease-in"
                   >
                     <IconBrandVscode :style="widthHeight" />Vscode
                   </div>
                   <div
-                    class="flex flex-row items-center cursor-pointer hover:opacity-70 ease-in"
+                    class="flex flex-row items-center cursor-pointer hover:opacity-70 transition-all duration-300 ease-in"
                   >
                     <IconBrandSvelte :style="widthHeight" />Svelte
                   </div>
-
+                  <!-- <div
+                    class="flex flex-row items-center cursor-pointer hover:opacity-70 transition-all duration-300 ease-in"
+                  >
+                    <IconBrandReact :style="widthHeight" />React
+                  </div> -->
                   <div
-                    class="flex flex-row items-center cursor-pointer hover:opacity-70 ease-in"
+                    class="flex flex-row items-center cursor-pointer hover:opacity-70 transition-all duration-300 ease-in"
                   >
                     <IconBrandNodejs :style="widthHeight" />Nodejs
                   </div>
                   <div
-                    class="flex flex-row items-center cursor-pointer hover:opacity-70 ease-in"
+                    class="flex flex-row items-center cursor-pointer hover:opacity-70 transition-all duration-300 ease-in"
                   >
                     <IconBrandNpm :style="widthHeight" />
                   </div>
                 </div>
               </div>
             </article>
-            <div class="flex flex-col gap-x-2 justify-center">
+            <div class="flex flex-row gap-x-4 justify-center">
               <article
-                class="animate-background 2xl:mt-5 rounded-xl bg-gradient-to-r mt-6 bg-[length:400%_400%] p-[0.11rem] shadow-xl transition [animation-duration:_6s] hover:shadow-sm shadow-gray-700/25 duration-500 hover:bg-gray-800 cursor-pointer w-full"
+                class="animate-background 2xl:mt-5 rounded-xl bg-gradient-to-r mt-6 bg-[length:400%_400%] p-[0.11rem] shadow-xl transition [animation-duration:_6s] hover:shadow-sm shadow-gray-700/25 transition-all duration-500 hover:bg-gray-800 cursor-pointer 2xl:w-full"
               >
                 <div class="rounded-[10px] p-4 bg-gray-900 sm:p-4 h-full">
                   <time
@@ -184,49 +175,27 @@ const widthTest = computed(() => {
                     Projects
                   </time>
                   <div
-                    class="flex flex-col flex-wrap w-fit md:gap-x-2 md:gap-y-2 gap-y-0.5 gap-x-0.5 text-sm"
+                    class="flex flex-col flex-wrap w-full md:gap-x-2 md:gap-y-2 gap-y-0.5 gap-x-0.5 text-sm"
                   >
                     <a
                       href="https://ppcode.dev"
                       target="_blank"
-                      class="flex flex-row items-center cursor-pointer hover:opacity-70 ease-in"
+                      class="flex flex-row items-center cursor-pointer hover:opacity-70 transition-all duration-300 ease-in"
                     >
-                      <IconApp :style="widthHeightSub" /><span class="ml-0.5"
-                        >Open AI chat</span
-                      >
+                      <IconApp :style="widthHeightLinks" />Open AI chat
                     </a>
                     <a
                       href="https://jscheatsheet.netlify.app/"
                       target="_blank"
-                      class="flex flex-row items-center text-yellow-100 cursor-pointer hover:opacity-70 ease-in"
+                      class="flex flex-row items-center text-yellow-100 cursor-pointer hover:opacity-70 transition-all duration-300 ease-in"
                     >
-                      <IconApp :style="widthHeightSub" /><span class="ml-0.5"
-                        >Js cheatsheet</span
-                      >
-                    </a>
-                    <a
-                      href="https://jscheatsheet.netlify.app/"
-                      target="_blank"
-                      class="flex flex-row items-center text-yellow-100 cursor-pointer hover:opacity-70 ease-in"
-                    >
-                      <IconApp :style="widthHeightSub" /><span class="ml-0.5"
-                        >Avatar AI</span
-                      >
-                    </a>
-                    <a
-                      href="https://jscheatsheet.netlify.app/"
-                      target="_blank"
-                      class="flex flex-row items-center text-yellow-100 cursor-pointer hover:opacity-70 ease-in"
-                    >
-                      <IconApp :style="widthHeightSub" /><span class="ml-0.5"
-                        >PDPkrypto</span
-                      >
+                      <IconApp :style="widthHeightLinks" />Js cheatsheet
                     </a>
                   </div>
                 </div>
               </article>
               <article
-                class="animate-background 2xl:mt-5 rounded-xl bg-gradient-to-r mt-6 bg-[length:400%_400%] p-[0.11rem] shadow-xl [animation-duration:_6s] hover:shadow-sm shadow-gray-700/25 transition-all duration-500 hover:bg-gray-800 cursor-pointer 2xl:w-full w-full mb-6"
+                class="animate-background 2xl:mt-5 rounded-xl bg-gradient-to-r mt-6 bg-[length:400%_400%] p-[0.11rem] shadow-xl [animation-duration:_6s] hover:shadow-sm shadow-gray-700/25 transition-all duration-500 hover:bg-gray-800 cursor-pointer 2xl:w-full"
               >
                 <div class="rounded-[10px] p-4 bg-gray-900 sm:p-4">
                   <time
@@ -236,31 +205,17 @@ const widthTest = computed(() => {
                     Blog
                   </time>
                   <div
-                    class="flex flex-col flex-wrap w-fit md:gap-x-2 md:gap-y-2 gap-y-0.5 gap-x-0.5 text-sm"
+                    class="flex flex-col flex-wrap w-full md:gap-x-2 md:gap-y-2 gap-y-0.5 gap-x-0.5 text-sm"
                   >
                     <div
-                      class="flex flex-row items-center cursor-pointer hover:opacity-70 ease-in"
+                      class="flex flex-row items-center cursor-pointer hover:opacity-70 transition-all duration-300 ease-in"
                     >
-                      <IconArticle :style="widthHeightSub" />
-                      <span class="ml-0.5">How to prompt</span>
+                      <IconArticle :style="widthHeightLinks" /> How to prompt
                     </div>
                     <div
-                      class="flex flex-row items-center cursor-pointer hover:opacity-70 ease-in"
+                      class="flex flex-row items-center cursor-pointer hover:opacity-70 transition-all duration-300 ease-in"
                     >
-                      <IconArticle :style="widthHeightSub" />
-                      <span class="ml-0.5">Vuejs 3 in x23</span>
-                    </div>
-                    <div
-                      class="flex flex-row items-center cursor-pointer hover:opacity-70 ease-in"
-                    >
-                      <IconArticle :style="widthHeightSub" />
-                      <span class="ml-0.5">Eth top scaling solutions</span>
-                    </div>
-                    <div
-                      class="flex flex-row items-center cursor-pointer hover:opacity-70 ease-in"
-                    >
-                      <IconArticle :style="widthHeightSub" />
-                      <span class="ml-0.5">Polkadot the tech</span>
+                      <IconArticle :style="widthHeightLinks" />Vuejs 3 in x23
                     </div>
                   </div>
                 </div>
@@ -268,9 +223,8 @@ const widthTest = computed(() => {
             </div>
           </div>
         </div>
-      </div></Transition
-    >
-
+      </div>
+    </Transition>
     <Transition> <div></div></Transition>
     <!-- <div
       class="absolute 2xl:ml-[33.4%] m-[75.4%] 2xl:mt-[46rem] -bottom-44 2xl:w-[19%] 2xl:text-md text-xs sm:ml-[5%] text-orange-200 opacity-70"
@@ -284,7 +238,7 @@ const widthTest = computed(() => {
     </div> -->
     <Transition>
       <article
-        class="absolute right-1 top-0 2xl:mr-24 sm:mr-4 animate-background mt-1 mr-1 rounded-xl bg-gradient-to-r from-orange-600 via-teal-300 to-purple-500 bg-[length:400%_400%] p-[0.11rem] shadow-xl transition [animation-duration:_6s] hover:shadow-sm shadow-gray-700/25"
+        class="absolute right-0 2xl:mr-24 sm:mr-4 animate-background mt-1 mr-1 rounded-xl bg-gradient-to-r from-orange-600 via-teal-300 to-purple-500 bg-[length:400%_400%] p-[0.11rem] shadow-xl transition [animation-duration:_6s] hover:shadow-sm shadow-gray-700/25"
       >
         <div class="rounded-[10px] p-1 bg-gray-900 sm:p-1">
           <time datetime="2022-10-10" class="block text-xl text-purple-300">
@@ -370,11 +324,5 @@ const widthTest = computed(() => {
 .v-enter-from,
 .v-leave-to {
   opacity: 0;
-}
-
-@media (min-width: 1000px) {
-  .my-element {
-    margin-left: calc(10% - screenWidth.value * 1px);
-  }
 }
 </style>
