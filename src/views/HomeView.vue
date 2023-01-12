@@ -79,7 +79,7 @@ const widthHeightLinks = computed(() => {
             <span class="font-extrabold text-purple-200 xl:text-purple-300"
               >I've always been drawn to the power of technology to change the
               world.</span
-            ><span class="text-gray-200 2xl:text-gray-300">
+            ><span class="2xl:text-gray-300">
               <br /><br />As a full-stack developer, I've dedicated my dev
               career to understanding the potential of decentralized
               technologies and how they can empower people to take control of
@@ -92,12 +92,12 @@ const widthHeightLinks = computed(() => {
             <span class="text-orange-200 font-bold">AI</span>.
 
             <article
-              class="animate-background 2xl:mt-10 rounded-xl bg-gradient-to-r mt-6 from-rose-200 via-purple-300 to-orange-500 bg-[length:400%_400%] p-[0.11rem] shadow-xl transition [animation-duration:_6s] hover:shadow-sm dark:shadow-gray-700/25"
+              class="animate-background 2xl:mt-10 rounded-xl bg-gradient-to-r mt-6 from-rose-200 via-purple-300 to-orange-500 bg-[length:400%_400%] p-[0.11rem] shadow-xl transition [animation-duration:_6s] hover:shadow-sm shadow-gray-700/25"
             >
-              <div class="rounded-[10px] bg-white p-4 dark:bg-gray-900 sm:p-4">
+              <div class="rounded-[10px] p-4 bg-gray-900 sm:p-4">
                 <time
                   datetime="2022-10-10"
-                  class="block text-xl text-gray-200 dark:text-orange-300 mb-2"
+                  class="block text-xl text-orange-300 mb-2"
                 >
                   Skills
                 </time>
@@ -165,14 +165,12 @@ const widthHeightLinks = computed(() => {
             </article>
             <div class="flex flex-row gap-x-4 justify-center">
               <article
-                class="animate-background 2xl:mt-5 rounded-xl bg-gradient-to-r mt-6 bg-[length:400%_400%] p-[0.11rem] shadow-xl transition [animation-duration:_6s] hover:shadow-sm dark:shadow-gray-700/25 dark:transition-all dark:duration-500 hover:bg-gray-800 cursor-pointer 2xl:w-full"
+                class="animate-background 2xl:mt-5 rounded-xl bg-gradient-to-r mt-6 bg-[length:400%_400%] p-[0.11rem] shadow-xl transition [animation-duration:_6s] hover:shadow-sm shadow-gray-700/25 transition-all duration-500 hover:bg-gray-800 cursor-pointer 2xl:w-full"
               >
-                <div
-                  class="rounded-[10px] bg-white p-4 dark:bg-gray-900 sm:p-4 h-full"
-                >
+                <div class="rounded-[10px] p-4 bg-gray-900 sm:p-4 h-full">
                   <time
                     datetime="2022-10-10"
-                    class="block text-xl text-gray-200 dark:text-purple-300 mb-2"
+                    class="block text-xl text-purple-300 mb-2"
                   >
                     Projects
                   </time>
@@ -197,14 +195,12 @@ const widthHeightLinks = computed(() => {
                 </div>
               </article>
               <article
-                class="animate-background 2xl:mt-5 rounded-xl bg-gradient-to-r mt-6 bg-[length:400%_400%] p-[0.11rem] shadow-xl transition [animation-duration:_6s] hover:shadow-sm dark:shadow-gray-700/25 dark:transition-all dark:duration-500 hover:bg-gray-800 cursor-pointer 2xl:w-full"
+                class="animate-background 2xl:mt-5 rounded-xl bg-gradient-to-r mt-6 bg-[length:400%_400%] p-[0.11rem] shadow-xl transition [animation-duration:_6s] hover:shadow-sm shadow-gray-700/25 transition-all duration-500 hover:bg-gray-800 cursor-pointer 2xl:w-full"
               >
-                <div
-                  class="rounded-[10px] bg-white p-4 dark:bg-gray-900 sm:p-4"
-                >
+                <div class="rounded-[10px] p-4 bg-gray-900 sm:p-4">
                   <time
                     datetime="2022-10-10"
-                    class="block text-xl text-gray-200 dark:text-teal-300 mb-2"
+                    class="block text-xl text-teal-300 mb-2"
                   >
                     Blog
                   </time>
@@ -242,13 +238,10 @@ const widthHeightLinks = computed(() => {
     </div> -->
     <Transition>
       <article
-        class="absolute right-0 2xl:mr-24 sm:mr-4 animate-background mt-1 mr-1 rounded-xl bg-gradient-to-r from-orange-600 via-teal-300 to-purple-500 bg-[length:400%_400%] p-[0.11rem] shadow-xl transition [animation-duration:_6s] hover:shadow-sm dark:shadow-gray-700/25"
+        class="absolute right-0 2xl:mr-24 sm:mr-4 animate-background mt-1 mr-1 rounded-xl bg-gradient-to-r from-orange-600 via-teal-300 to-purple-500 bg-[length:400%_400%] p-[0.11rem] shadow-xl transition [animation-duration:_6s] hover:shadow-sm shadow-gray-700/25"
       >
-        <div class="rounded-[10px] bg-white p-1 dark:bg-gray-900 sm:p-1">
-          <time
-            datetime="2022-10-10"
-            class="block text-xl text-gray-200 dark:text-purple-300"
-          >
+        <div class="rounded-[10px] p-1 bg-gray-900 sm:p-1">
+          <time datetime="2022-10-10" class="block text-xl text-purple-300">
           </time>
           <div class="flex flex-row flex-wrap w-full gap-y-0.5">
             <a
