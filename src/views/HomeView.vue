@@ -194,6 +194,25 @@ const widthTest = computed(() => {
                     class="flex flex-col flex-wrap w-fit md:gap-x-2 md:gap-y-2 gap-y-0.5 gap-x-0.5 text-sm"
                   >
                     <a
+                      href="https://aivoice.perpettersen.no/"
+                      target="_blank"
+                      class="flex flex-row items-center cursor-pointer hover:opacity-70 ease-in"
+                    >
+                      <IconApp :style="widthHeightSub" /><span class="ml-0.5"
+                        >VoiceAIlity - Voice of ChatGPT3</span
+                      >
+                    </a>
+                    <a
+                      href="https://vuecryptoportfolio.netlify.app/"
+                      target="_blank"
+                      class="flex flex-row items-center cursor-pointer hover:opacity-70 ease-in"
+                    >
+                      <IconApp :style="widthHeightSub" /><span class="ml-0.5"
+                        >Crypto and Stock portfolio🔥</span
+                      >
+                    </a>
+
+                    <a
                       href="https://www.pdpkrypto.no"
                       target="_blank"
                       class="flex flex-row items-center cursor-pointer hover:opacity-70 ease-in"
