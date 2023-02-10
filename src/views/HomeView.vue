@@ -285,6 +285,14 @@ const widthTest = computed(() => {
                     class="flex flex-col flex-wrap w-fit md:gap-x-2 md:gap-y-2 gap-y-0.5 gap-x-0.5 text-sm"
                   >
                     <a
+                      href="https://dev.to/web3per/the-revolutionary-technology-of-blockchain-and-web3-ckc"
+                      target="_blank"
+                      class="flex flex-row items-center cursor-pointer hover:opacity-70 ease-in"
+                    >
+                      <IconArticle :style="widthHeightSub" />
+                      <span class="ml-0.5">Blockchain and Web3</span>
+                    </a>
+                    <a
                       href="https://dev.to/web3per/from-ethernet-to-ethereum-a-journey-through-the-evolution-of-internet-technology-part-1-243a"
                       target="_blank"
                       class="flex flex-row items-center cursor-pointer hover:opacity-70 ease-in"
@@ -294,14 +302,7 @@ const widthTest = computed(() => {
                         >From Ethernet to Ethereum: Part 1</span
                       >
                     </a>
-                    <div
-                      class="flex flex-row items-center cursor-pointer hover:opacity-70 ease-in text-red-300"
-                    >
-                      <IconArticle :style="widthHeightSub" />
-                      <span class="ml-0.5"
-                        >Web 3 beginner developer - comming</span
-                      >
-                    </div>
+
                     <div
                       class="flex flex-row items-center cursor-pointer hover:opacity-70 ease-in text-red-300"
                     >
