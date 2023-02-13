@@ -66,10 +66,10 @@ const widthTest = computed(() => {
   >
     <Transition>
       <div
-        class="sm:absolute xl:w-[20.85%] mx-auto w-[99%] my-auto bg-gray-800 bg-transparent xl:ml-[17.6%] md:w-[24rem] sm:w-[24rem] transition-all duration-200 ease-out"
+        class="sm:absolute 2xl:w-[40rem] h-full mx-auto sm:w-[99%] w-full my-auto bg-gray-800 bg-transparent xl:ml-0 md:w-[30rem] transition-all duration-200 ease-out"
       >
         <div
-          class="h-full flex flex-col w-full text-gray-200 sm:pt-12 pt-10 xl:px-3 sm:px-5 px-6 font-mono xl:bg-opacity-0 sm:bg-opacity-90 sm:bg-gray-900"
+          class="h-full flex flex-col w-full text-gray-200 sm:pt-12 pt-10 xl:px-10 sm:px-5 px-6 font-mono sm:bg-opacity-95 bg-opacity-70 bg-gray-900"
         >
           <div class="">
             <span
